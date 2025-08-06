@@ -1,14 +1,14 @@
 print("Welcome to the Parking Meter Simulation")
-print("You can enter these coins:")
+print("You can enter these coins :")
 print("$1.00 = 30 minutes")
 print("$0.50 = 15 minutes")
 print("$0.20 = 6 minutes")
 print("$0.10 = 3 minutes")
-print("Type 'stop' to finish.")
+print("Type stop to finish.")
 minutes = 0
 coin = ""
 while minutes < 60 and coin != "stop":
-    coin = input("Enter coin or type 'stop': ")
+    coin = input("Enter coin or type stop : ")
     if coin == "$1.00":
         minutes = minutes + 30
     elif coin == "$0.50":
@@ -20,9 +20,9 @@ while minutes < 60 and coin != "stop":
     elif coin != "stop":
         print("That is not a valid coin.")
 print("You have", minutes, "time remaining.")
-print("Simulating parking countdown:")
+print("Simulating parking countdown :")
 time_left = minutes
 while time_left > 0:
-    print("Parking time remaining:", time_left, "minutes")
+    print("Parking time remaining :", time_left, "minutes")
     time_left = time_left - 10
 print("Time expired!")
