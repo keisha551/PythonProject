@@ -1,0 +1,10 @@
+h="hello"
+w="world"
+new=h+""+w
+print(new)
+one="1"
+two="2"
+add=one+two
+print(add)
+h2="hello"*5
+print(h2)
