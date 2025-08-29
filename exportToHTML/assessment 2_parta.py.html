@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>assessment 2_parta.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #5f826b; font-style: italic;}
+.s1 { color: #bcbec4;}
+.s2 { color: #7a7e85;}
+.s3 { color: #cf8e6d;}
+.s4 { color: #bcbec4;}
+.s5 { color: #6aab73;}
+.s6 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+assessment 2_parta.py</font>
+</center></td></tr></table>
+<pre><span class="s0">''' 
+task 1: python function staff_info 
+'''</span>
+
+
+<span class="s2"># inside makes up the staff_info function</span>
+<span class="s3">def </span><span class="s1">staff_info</span><span class="s4">():</span>
+    <span class="s2"># input method for user to enter</span>
+    <span class="s1">date </span><span class="s4">= </span><span class="s1">input</span><span class="s4">(</span><span class="s5">&quot;Enter date: &quot;</span><span class="s4">)</span>
+    <span class="s1">staff_id </span><span class="s4">= </span><span class="s1">input</span><span class="s4">(</span><span class="s5">&quot;Enter staff ID: &quot;</span><span class="s4">)</span>
+    <span class="s1">staff_name </span><span class="s4">= </span><span class="s1">input</span><span class="s4">(</span><span class="s5">&quot;Enter staff name: &quot;</span><span class="s4">)</span>
+    <span class="s2"># unique id being generated</span>
+    <span class="s1">counter </span><span class="s4">= </span><span class="s6">1</span>
+    <span class="s1">requisition_id </span><span class="s4">= </span><span class="s6">1000 </span><span class="s4">+ </span><span class="s1">counter</span>
+    <span class="s2"># shows output to user</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">&quot;Printing Staff Information: &quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Date: </span><span class="s3">{</span><span class="s1">date</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Staff ID: </span><span class="s3">{</span><span class="s1">staff_id</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Staff name: </span><span class="s3">{</span><span class="s1">staff_name</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Requisition ID: </span><span class="s3">{</span><span class="s1">requisition_id</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s2"># returning the data to the function</span>
+    <span class="s3">return </span><span class="s4">{</span>
+        <span class="s5">&quot;Date&quot;</span><span class="s4">: </span><span class="s1">date</span><span class="s4">,</span>
+        <span class="s5">&quot;Staff ID&quot;</span><span class="s4">: </span><span class="s1">staff_id</span><span class="s4">,</span>
+        <span class="s5">&quot;Staff Name&quot;</span><span class="s4">: </span><span class="s1">staff_name</span><span class="s4">,</span>
+        <span class="s5">&quot;Requisition ID&quot;</span><span class="s4">: </span><span class="s1">requisition_id</span>
+    <span class="s4">}</span>
+
+
+<span class="s5">''' 
+task 2: python function requisition_total 
+'''</span>
+
+
+<span class="s3">def </span><span class="s1">requisition_total</span><span class="s4">():</span>
+    <span class="s2"># calling the staff_info function</span>
+    <span class="s1">staff_data </span><span class="s4">= </span><span class="s1">staff_info</span><span class="s4">()</span>
+    <span class="s1">req_item </span><span class="s4">= </span><span class="s1">int</span><span class="s4">(</span><span class="s1">input</span><span class="s4">(</span><span class="s5">&quot;Enter requisition items: &quot;</span><span class="s4">))</span>
+    <span class="s1">item_name </span><span class="s4">= []</span>
+    <span class="s1">item_price </span><span class="s4">= []</span>
+    <span class="s2"># using for loop to capture more inputs for list</span>
+    <span class="s3">for </span><span class="s1">i </span><span class="s3">in </span><span class="s1">range</span><span class="s4">(</span><span class="s1">req_item</span><span class="s4">):</span>
+        <span class="s1">n </span><span class="s4">= </span><span class="s1">input</span><span class="s4">(</span><span class="s5">f&quot;enter the name of the item:</span><span class="s3">{</span><span class="s1">i </span><span class="s4">+ </span><span class="s6">1</span><span class="s3">} </span><span class="s5">&quot;</span><span class="s4">)</span>
+        <span class="s1">item_name</span><span class="s4">.</span><span class="s1">append</span><span class="s4">(</span><span class="s1">n</span><span class="s4">)</span>
+        <span class="s1">p </span><span class="s4">= </span><span class="s1">float</span><span class="s4">(</span><span class="s1">input</span><span class="s4">(</span><span class="s5">f&quot;enter the price:</span><span class="s3">{</span><span class="s1">i </span><span class="s4">+ </span><span class="s6">1</span><span class="s3">} </span><span class="s5">&quot;</span><span class="s4">))</span>
+        <span class="s1">item_price</span><span class="s4">.</span><span class="s1">append</span><span class="s4">(</span><span class="s1">p</span><span class="s4">)</span>
+    <span class="s3">for </span><span class="s1">i </span><span class="s3">in </span><span class="s1">range</span><span class="s4">(</span><span class="s1">req_item</span><span class="s4">):</span>
+        <span class="s1">print</span><span class="s4">(</span><span class="s1">item_name</span><span class="s4">[</span><span class="s1">i</span><span class="s4">], </span><span class="s5">&quot;:&quot;</span><span class="s4">, </span><span class="s1">item_price</span><span class="s4">[</span><span class="s1">i</span><span class="s4">])</span>
+    <span class="s2"># compute total value of requisition items</span>
+    <span class="s1">total </span><span class="s4">= </span><span class="s6">0</span>
+    <span class="s3">for </span><span class="s1">prices </span><span class="s3">in </span><span class="s1">item_price</span><span class="s4">:</span>
+        <span class="s1">total </span><span class="s4">= </span><span class="s1">prices </span><span class="s4">+ </span><span class="s1">total</span>
+
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;total:</span><span class="s3">{</span><span class="s1">total</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s3">return </span><span class="s1">total</span><span class="s4">, </span><span class="s1">staff_data</span>
+
+
+<span class="s5">''' 
+task3: python function requisition_approval 
+'''</span>
+
+
+<span class="s3">def </span><span class="s1">requisition_approval</span><span class="s4">():</span>
+    <span class="s2"># using requisition_total function as input</span>
+    <span class="s1">total</span><span class="s4">, </span><span class="s1">staff_data </span><span class="s4">= </span><span class="s1">requisition_total</span><span class="s4">()</span>
+    <span class="s1">default_status </span><span class="s4">= </span><span class="s5">&quot;Pending&quot;</span>
+    <span class="s1">approval_status </span><span class="s4">= </span><span class="s3">None</span>
+    <span class="s2"># using if statement for automatic Approved</span>
+    <span class="s3">if </span><span class="s1">total </span><span class="s4">&lt;= </span><span class="s6">500</span><span class="s4">:</span>
+        <span class="s1">status </span><span class="s4">= </span><span class="s5">&quot;Approved&quot;</span>
+    <span class="s3">else</span><span class="s4">:</span>
+        <span class="s1">status </span><span class="s4">= </span><span class="s5">&quot;Pending&quot;</span>
+    <span class="s2"># assigning aproval refrence number</span>
+    <span class="s1">requisition_id </span><span class="s4">= </span><span class="s5">&quot;REQ&quot; </span><span class="s4">+ </span><span class="s1">str</span><span class="s4">(</span><span class="s6">1000</span><span class="s4">)</span>
+    <span class="s2"># arn is approval refrence number and following the rule</span>
+    <span class="s1">arn </span><span class="s4">= </span><span class="s1">staff_data</span><span class="s4">[</span><span class="s5">&quot;Staff ID&quot;</span><span class="s4">] + </span><span class="s1">requisition_id</span><span class="s4">[-</span><span class="s6">3</span><span class="s4">:]</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Total: </span><span class="s3">{</span><span class="s1">total</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Status: </span><span class="s3">{</span><span class="s1">status</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s3">if </span><span class="s1">status </span><span class="s4">== </span><span class="s5">&quot;Approved&quot;</span><span class="s4">:</span>
+        <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Approval Reference Number: </span><span class="s3">{</span><span class="s1">arn</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s3">return </span><span class="s1">staff_data</span><span class="s4">[</span><span class="s5">&quot;Date&quot;</span><span class="s4">], </span><span class="s1">requisition_id</span><span class="s4">, </span><span class="s1">staff_data</span><span class="s4">[</span><span class="s5">&quot;Staff ID&quot;</span><span class="s4">], </span><span class="s1">staff_data</span><span class="s4">[</span><span class="s5">&quot;Staff Name&quot;</span><span class="s4">], </span><span class="s1">total</span><span class="s4">, </span><span class="s1">status</span><span class="s4">, </span><span class="s1">arn</span>
+
+
+<span class="s5">''' 
+task 4: python function display_requisitions 
+'''</span>
+
+
+<span class="s3">def </span><span class="s1">display_requisitions</span><span class="s4">(</span><span class="s1">date</span><span class="s4">, </span><span class="s1">requisition_id</span><span class="s4">, </span><span class="s1">staff_id</span><span class="s4">, </span><span class="s1">staff_name</span><span class="s4">, </span><span class="s1">total</span><span class="s4">, </span><span class="s1">status</span><span class="s4">, </span><span class="s1">arn</span><span class="s4">):</span>
+    <span class="s2"># display staff basic information and total requisitions</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">&quot;Printing Requisitions: &quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Date: </span><span class="s3">{</span><span class="s1">date</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Requisition ID: </span><span class="s3">{</span><span class="s1">requisition_id</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Staff ID: </span><span class="s3">{</span><span class="s1">staff_id</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Staff Name: </span><span class="s3">{</span><span class="s1">staff_name</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Total: </span><span class="s3">{</span><span class="s1">total</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Status: </span><span class="s3">{</span><span class="s1">status</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span>
+    <span class="s1">print</span><span class="s4">(</span><span class="s5">f&quot;Approval Reference Number: </span><span class="s3">{</span><span class="s1">arn</span><span class="s3">}</span><span class="s5">&quot;</span><span class="s4">)</span></pre>
+</body>
+</html>
